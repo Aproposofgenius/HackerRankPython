@@ -1,0 +1,33 @@
+def print_rangoli(size):
+    # your code goes here
+    lowerc = "abcdefghijklmnopqrstuvwxyz"
+    sub = lowerc[(size-1)::-1]
+    sua = lowerc[1:size]
+    width = ((2*size)-2)+size+(size-1)
+    ab = ''
+    for c in sub:
+        a=ab
+        b=ab[::-1]
+        curr = (a+c+b).center(width, '-')
+        print (curr)
+        ab+=(c+"-")
+        if c=="a":
+            ab=ab.rstrip('a-')
+            for d in sua:
+                ab=ab.rstrip("-")
+                ab=ab.rstrip(d)
+                a=ab
+                b=ab[::-1]
+                curr = (a+d+b).center(width, '-')
+                print (curr)
+                
+
+
+   
+
+
+        
+
+if __name__ == '__main__':
+    int(input())
+    print_rangoli(n)
