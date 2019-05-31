@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import product
+first =[]
+a=input().split()
+first = list(map(int, a))
+second =[]
+b=input().split()
+second = list(map(int, b))
+c=list((product(first, second)))
+
+print (*c)
