@@ -1,0 +1,11 @@
+from collections import Counter
+N = int(input()) #number of shoes
+sizes = list(map(int, input().split(" "))) #shoe sizes
+lists = Counter(sizes)
+total = 0
+for i in range(int(input())):
+    a = list(map(int, input().split(" ")))
+    if lists[a[0]]>0:
+        total+=a[1] 
+        lists[a[0]]-=1
+print (total)
