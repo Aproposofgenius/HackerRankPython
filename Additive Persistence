@@ -1,0 +1,16 @@
+def AdditivePersistence(num): 
+    num =str(num)
+    count=0
+    
+    while len(num)>1:
+        num = sum(map(int, num)) #sums digits in the number
+        num=str(num)
+        count+=1
+    else:
+        return count
+     
+    # code goes here 
+    return 0
+    
+# keep this function call here  
+print AdditivePersistence(raw_input())
