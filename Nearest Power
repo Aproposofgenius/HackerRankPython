@@ -1,0 +1,48 @@
+{
+#Initial Template for Python 3
+//Position this line where user code will be pasted.
+import math
+    
+def main():
+    testcases=int(input()) #testcases
+    while(testcases>0):
+        a=int(input())
+        b=int(input())
+        print(nearestPower(a,b))
+        testcases-=1
+        
+if __name__=='__main__':
+    main()
+}
+''' This is a function problem.You only need to complete the function given below '''
+#User function Template for python3
+    
+def nearestPower(a,b):
+    ##Your code here
+    ##return the closest power
+    count = 0
+    total = b
+    wut = False
+    while wut==False:
+        total=total//a
+        count +=1
+        if total==0 or total==1:
+            wut=True
+            
+    z = a**count
+    low = a**(count-1)
+    high = a**(count+1)
+    if z>b:
+        if(b-low)<(z-b):
+            return low
+        else:
+            return z
+            
+    elif z<b:
+        if(b-z)<(high-b):
+            return z
+        else:
+            return high
+            
+    else:
+        return z
