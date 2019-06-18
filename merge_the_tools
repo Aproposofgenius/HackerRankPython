@@ -1,0 +1,16 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    length = len(string)
+    div = length//k
+    substr = [''.join(part) for part in zip(*[iter(string)]*k)]
+    for c in substr:
+        fin =''
+        for a in c:
+            if a not in fin:
+                fin+=a
+     
+        print (fin)
+   
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
