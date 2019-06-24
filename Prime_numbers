@@ -1,0 +1,21 @@
+import math
+def PrimeTime(num): 
+
+
+  # all numbers less than 2 are not primes
+  if num < 2:
+    return 'false'
+  
+  # more efficient loop
+  for i in range(2, int(math.ceil(math.sqrt(num)))):
+    if num % i == 0:
+      return 'false'
+    
+  # return true if the loop finished and num was  
+  # not divisible evenly by any number
+  return 'true'
+
+print PrimeTime(raw_input())  
+
+
+  
