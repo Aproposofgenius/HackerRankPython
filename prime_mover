@@ -1,0 +1,14 @@
+import math
+
+def PrimeMover(num1):
+    num1= int(num1)
+    cusp=[]
+    while len(cusp)<num1:
+        for num in range(2,10**4):
+            if all(num%i!=0 for i in range(2,num)):
+                cusp.append(num)
+    # code goes here 
+    return cusp[num1-1]
+    
+# keep this function call here  
+print PrimeMover(raw_input())
